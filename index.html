@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img src="shikamaru.jpg" id="shi" style="position: absolute;top: 0px;left: 0px;width: 200px;height: 200px">
+<img src="hinh-anh-con-bo-de-thuong.jpg" id="bo" style="position: absolute;top: 200px;left: 500px;width: 200px;height: 200px">
+<script>
+    let shiimg = document.getElementById('shi');
+    let boimg = document.getElementById('bo');
+
+    function moveLeft(){
+        shiimg.style.left = parseInt(shiimg.style.left) - 15 + 'px';
+    }
+    function moveRight(){
+        shiimg.style.left = parseInt(shiimg.style.left) + 15 + 'px';
+    }
+    function moveUp(){
+        shiimg.style.top = parseInt(shiimg.style.top) -15 + 'px';
+    }
+    function moveDown(){
+        shiimg.style.top = parseInt(shiimg.style.top) +15+ 'px';
+    }
+    function moveWithkeybroad(evt){
+        switch (evt.keyCode) {
+            case 39:
+                moveRight();
+                break;
+            case 37:
+                moveLeft();
+                break;
+            case 38:
+                moveUp();
+                break;
+            case 40:
+                moveDown();
+                break;
+        }
+    }
+    // document.addEventListener("keydown",moveWithkeybroad);
+    function docReady() {
+        window.addEventListener('keydown', moveWithkeybroad);
+    }
+    function meet(){
+        let x = parseInt(shiimg.style.left);
+        let y = parseInt(shiimg.style.top);
+        let a = parseInt(boimg.style.left);
+        let b = parseInt(boimg.style.top);
+        let xx = x + parseInt(shiimg.style.width);
+        let yy = y + parseInt(shiimg.style.height);
+        let aa = a + parseInt(boimg.style.width);
+        let bb = b + parseInt(boimg.style.height);
+        let meetx = aa>=x && bb>=a;
+        let meety =xx>=a && yy>=b;
+        if (meetx&&meety){
+
+        }
+    }
+
+</script>
+</body>
+</html>

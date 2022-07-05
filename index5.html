@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function print(){
+    //     let f1=1;
+    //     let f2=2;
+    //     let result = 0;
+    //
+    //     for (let i=0;i<18;i++){
+    //         result= f1+f2;
+    //         document.write(result,',');
+    //         f1=f2;
+    //         f2=result;
+    //     }
+    //
+    // }
+    // print();
+    // let f1=1;
+    // let f2=2;
+    // while (true){
+    //     f1+f2=f3;
+    //     f1=f2;
+    //     f2=f3;
+    //     if (f3%5==0){
+    //         document.write(f3);
+    //         break;
+    //     }
+    // }
+    // let n1=0;
+    // let n2=1;
+    // let sum ;
+    // for (let i=1;i<=20;i++){
+    //     sum=n1+n2;
+    //     n1=n2;
+    //     n2=sum;
+    //     // document.write(','+n1);
+    //     if (n1%5==0){
+    //         document.write('số chia hết cho 5 là'+n1);
+    //         break;
+    //     }
+    // }
+
+    // for (let i = 1; i <= 100; i++) {
+    //     if (i % 3 == 0 && i % 5 == 0) {
+    //         document.write('fizzbuzz <br>');
+    //     } else if (i % 5 == 0) {
+    //         document.write('buzz  <br>');
+    //     } else if (i % 3 == 0) {
+    //         document.write('fizz  <br>');
+    //
+    //     } else {
+    //         document.write(i, <br>);
+
+    // }
+
+
+    // let n = +prompt('nhập số lượng cần in');
+    for (let i=1;i<=5;i++){
+        for(j=1;j<=i;j++){
+            document.write('*');
+
+        }
+        document.write('<br>');
+
+    }
+    for (let i=5;i>0;i--){
+        for ( j=0;j<i;j++){
+            document.write('*');
+        }
+        document.write('<br>')
+    }
+
+
+    // for (let i=0;i<=25;i++){
+    //     for (let j=i-1;j<=i;j++){
+    //         document.write('*');
+    //     }
+    //     document.write('<br>')
+    // }
+    let N = +prompt('Nhập vào N: ');
+    // for(let i = 0; i < N; i++) {
+    //     console.log('i =========================',i)
+    //     for(let j=0; j<i; j++){ //Vong lap de ve cac khoang trang
+    //         console.log('j ========== ',j)
+    //         document.write("&nbsp;&nbsp;");
+    //     }
+    //     for(let k=i; k < N; k++){
+    //         console.log('k ==========',k)
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+
+    for (let i=0; i<N;i++){
+        for (let j=0;j<i;j++){
+
+            document.write("&nbsp;&nbsp;");
+
+        }
+        for (let k=i;k<N;k++){
+            document.write("*");
+
+        }
+        document.write('<br>')
+    }
+
+</script>
+</body>
+</html>
